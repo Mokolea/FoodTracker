@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="c2A-p2-IsA">
-                                <rect key="frame" x="20" y="80" width="560" height="105"/>
+                                <rect key="frame" x="20" y="80" width="560" height="437"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxF-pO-wzY">
                                         <rect key="frame" x="0.0" y="0.0" width="87" height="21"/>
@@ -39,6 +40,12 @@
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r9T-HJ-cmg"/>
                                         </connections>
                                     </button>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="rR2-g2-A8t">
+                                        <rect key="frame" x="0.0" y="117" width="320" height="320"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="rR2-g2-A8t" secondAttribute="height" multiplier="1:1" id="l8q-cO-DkD"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="9ts-gv-uvM" secondAttribute="trailing" id="SHH-6x-NIh"/>
@@ -63,4 +70,7 @@
             <point key="canvasLocation" x="619" y="629"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="600" height="800"/>
+    </resources>
 </document>
