@@ -40,10 +40,10 @@
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r9T-HJ-cmg"/>
                                         </connections>
                                     </button>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="rR2-g2-A8t">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="iBM-kM-2L5">
                                         <rect key="frame" x="0.0" y="117" width="320" height="320"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="rR2-g2-A8t" secondAttribute="height" multiplier="1:1" id="l8q-cO-DkD"/>
+                                            <constraint firstAttribute="width" secondItem="iBM-kM-2L5" secondAttribute="height" multiplier="1:1" id="oAT-8r-l19"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
