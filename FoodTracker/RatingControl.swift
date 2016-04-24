@@ -36,6 +36,7 @@ class RatingControl: UIView {
       addSubview(button)
     }
   }
+
   override func layoutSubviews() {
     // Set the button's width and height to a square the size of the frame's height.
     let buttonSize = Int(frame.size.height)
@@ -47,6 +48,7 @@ class RatingControl: UIView {
       button.frame = buttonFrame
     }
   }
+  
   override func intrinsicContentSize() -> CGSize {
     let buttonSize = Int(frame.size.height)
     let width = (buttonSize * starCount) + (spacing * (starCount - 1))

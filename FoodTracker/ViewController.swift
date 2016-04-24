@@ -35,6 +35,7 @@ class ViewController: UIViewController, /* protocols */ UITextFieldDelegate, UII
     textField.resignFirstResponder()
     return true
   }
+
   func textFieldDidEndEditing(textField: UITextField) {
     mealNameLabel.text = textField.text
   }
@@ -44,6 +45,7 @@ class ViewController: UIViewController, /* protocols */ UITextFieldDelegate, UII
     // Dismiss the picker if the user canceled.
     dismissViewControllerAnimated(true, completion: nil)
   }
+
   func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
     // The info dictionary contains multiple representations of the image, and this uses the original.
     let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
@@ -71,6 +73,7 @@ class ViewController: UIViewController, /* protocols */ UITextFieldDelegate, UII
 
     presentViewController(imagePickerController, animated: true, completion: nil)
   }
+  
   @IBAction func setDefaultLabelText(sender: UIButton) {
     mealNameLabel.text = "Default Text"
   }
