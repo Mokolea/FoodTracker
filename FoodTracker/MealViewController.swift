@@ -30,12 +30,21 @@ class MealViewController: UIViewController, /* protocols */ UITextFieldDelegate,
 
     // Handle the text field’s user input through delegate callbacks.
     nameTextField.delegate = self
+
+    // Enable the Save button only if the text field has a valid Meal name.
+    checkValidMealName()
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
 
+  }
+
+  func checkValidMealName() {
+    // Disable the Save button if the text field is empty.
+    let text = nameTextField.text ?? ""
+    saveButton.enabled = !text.isEmpty
   }
 
   // MARK: UITextFieldDelegate
@@ -46,8 +55,15 @@ class MealViewController: UIViewController, /* protocols */ UITextFieldDelegate,
     return true
   }
 
+  func textFieldDidBeginEditing(textField: UITextField) {
+    // Disable the Save button while editing.
+    saveButton.enabled = false
+  }
+
   func textFieldDidEndEditing(textField: UITextField) {
     //mealNameLabel.text = textField.text
+    checkValidMealName()
+    navigationItem.title = textField.text
   }
 
   // MARK: UIImagePickerControllerDelegate
