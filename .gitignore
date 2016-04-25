@@ -3,39 +3,39 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
-build/
-DerivedData
+#build/
+#DerivedData
 
 ## Various settings
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata
+#*.pbxuser
+#!default.pbxuser
+#*.mode1v3
+#!default.mode1v3
+#*.mode2v3
+#!default.mode2v3
+#*.perspectivev3
+#!default.perspectivev3
+#xcuserdata
 
 ## Other
-*.xccheckout
-*.moved-aside
-*.xcuserstate
-*.xcscmblueprint
+#*.xccheckout
+#*.moved-aside
+#*.xcuserstate
+#*.xcscmblueprint
 
 ## Obj-C/Swift specific
-*.hmap
-*.ipa
+#*.hmap
+#*.ipa
 
 ## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
+#timeline.xctimeline
+#playground.xcworkspace
 
 # Swift Package Manager
 #
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
 # Packages/
-.build/
+#.build/
 
 # CocoaPods
 #
@@ -50,7 +50,7 @@ playground.xcworkspace
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
-Carthage/Build
+#Carthage/Build
 
 # fastlane
 #
@@ -59,5 +59,5 @@ Carthage/Build
 # For more information about the recommended setup visit:
 # https://github.com/fastlane/fastlane/blob/master/docs/Gitignore.md
 
-fastlane/report.xml
-fastlane/screenshots
+#fastlane/report.xml
+#fastlane/screenshots
