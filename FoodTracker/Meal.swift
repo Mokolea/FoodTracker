@@ -23,8 +23,8 @@ class Meal {
     self.photo = photo
     self.rating = rating
 
-    // Initialization should fail if there is no name or if the rating is negative.
-    if name.isEmpty || rating < 0 {
+    // Initialization should fail if there is no name or if the rating is out of range.
+    if name.isEmpty || rating < 0 || rating > 5 {
       return nil
     }
   }
