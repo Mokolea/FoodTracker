@@ -11,6 +11,7 @@ import UIKit
 class MealTableViewController: UITableViewController {
 
   // MARK: Properties
+
   var meals = [Meal]()
 
   override func viewDidLoad() {
@@ -46,6 +47,7 @@ class MealTableViewController: UITableViewController {
   }
 
   // MARK: - Table view data source
+  
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
   }

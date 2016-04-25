@@ -19,6 +19,7 @@ class RatingControl: UIView {
   */
 
   // MARK: Properties
+
   var rating = 0 {
     didSet {
       setNeedsLayout()
@@ -29,6 +30,7 @@ class RatingControl: UIView {
   let starCount = 5
 
   // MARK: Initialization
+
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
 
@@ -72,6 +74,7 @@ class RatingControl: UIView {
   }
 
   // MARK: Button Action
+  
   func ratingButtonTapped(button: UIButton) {
     rating = ratingButtons.indexOf(button)! + 1
     print("Button pressed 👍, rating: \(rating)")

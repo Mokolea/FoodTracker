@@ -11,6 +11,7 @@ import UIKit
 class MealViewController: UIViewController, /* protocols */ UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
   // MARK: Properties
+
   @IBOutlet weak var nameTextField: UITextField!
   //@IBOutlet weak var mealNameLabel: UILabel!
   @IBOutlet weak var photoImageView: UIImageView!
@@ -38,6 +39,7 @@ class MealViewController: UIViewController, /* protocols */ UITextFieldDelegate,
   }
 
   // MARK: UITextFieldDelegate
+
   func textFieldShouldReturn(textField: UITextField) -> Bool {
     // Hide the keyboard.
     textField.resignFirstResponder()
@@ -49,6 +51,7 @@ class MealViewController: UIViewController, /* protocols */ UITextFieldDelegate,
   }
 
   // MARK: UIImagePickerControllerDelegate
+
   func imagePickerControllerDidCancel(picker: UIImagePickerController) {
     // Dismiss the picker if the user canceled.
     dismissViewControllerAnimated(true, completion: nil)
@@ -80,6 +83,7 @@ class MealViewController: UIViewController, /* protocols */ UITextFieldDelegate,
   }
 
   // MARK: Actions
+
   @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
     // Hide the keyboard (just in case).
     nameTextField.resignFirstResponder()
