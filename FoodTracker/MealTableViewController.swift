@@ -51,8 +51,10 @@ class MealTableViewController: UITableViewController {
   }
 
   func printMeals() {
+    var i = 0
     for meal in meals {
-      print("meal.name: '\(meal.name)'") // Debug
+      print("meal.name: [\(i)] '\(meal.name)'") // Debug
+      i += 1
     }
   }
 
