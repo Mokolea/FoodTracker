@@ -114,7 +114,7 @@ class MealTableViewController: UITableViewController {
     print("from: \(fromIndexPath.row), to: \(toIndexPath.row)") // Debug
     let meal = meals.removeAtIndex(fromIndexPath.row)
     meals.insert(meal, atIndex: toIndexPath.row)
-    printMeals() // Debug
+    saveMeals()
   }
 
   // Override to support conditional rearranging of the table view.
