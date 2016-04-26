@@ -47,10 +47,17 @@ class MealTableViewController: UITableViewController {
     let meal3 = Meal(name: "Pasta with Meatballs", photo: photo3, rating: 3)!
 
     meals += [meal1, meal2, meal3]
+    printMeals() // Debug
+  }
+
+  func printMeals() {
+    for meal in meals {
+      print("meal.name: '\(meal.name)'") // Debug
+    }
   }
 
   // MARK: - Table view data source
-  
+
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
   }
@@ -82,6 +89,7 @@ class MealTableViewController: UITableViewController {
 
   // Override to support editing the table view.
   override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    print("at: \(indexPath.row)") // Debug
     if editingStyle == .Delete {
       // Delete the row from the data source
       meals.removeAtIndex(indexPath.row)
@@ -89,22 +97,22 @@ class MealTableViewController: UITableViewController {
     } else if editingStyle == .Insert {
       // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }
+    printMeals() // Debug
   }
 
-  /*
   // Override to support rearranging the table view.
   override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+    print("from: \(fromIndexPath.row), to: \(toIndexPath.row)") // Debug
+    let meal = meals.removeAtIndex(fromIndexPath.row)
+    meals.insert(meal, atIndex: toIndexPath.row)
+    printMeals() // Debug
   }
-  */
 
-  /*
   // Override to support conditional rearranging of the table view.
   override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
     // Return false if you do not want the item to be re-orderable.
     return true
   }
-  */
 
   // MARK: - Navigation
 
@@ -144,6 +152,7 @@ class MealTableViewController: UITableViewController {
         meals.append(meal)
         tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
       }
+      printMeals() // Debug
     }
   }
 
