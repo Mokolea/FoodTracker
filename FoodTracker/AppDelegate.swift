@@ -6,6 +6,9 @@
 //  Copyright © 2016 Mario Ban. All rights reserved.
 //
 
+// TODO
+//  - views optimized for iPhone 6 portrait --> make them scalable for different sizes iPad, iPhone 5, ... portrait and landscape
+
 import UIKit
 
 @UIApplicationMain
