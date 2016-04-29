@@ -44,7 +44,7 @@ class RatingControl: UIView {
       button.setImage(emptyStarImage, forState: .Normal)
       button.setImage(filledStarImage, forState: .Selected)
       button.setImage(filledStarImage, forState: [.Highlighted, .Selected])
-      
+
       button.adjustsImageWhenHighlighted = false
 
       button.addTarget(self, action: #selector(RatingControl.ratingButtonTapped(_:)), forControlEvents: .TouchDown)
@@ -65,7 +65,7 @@ class RatingControl: UIView {
     }
     updateButtonSelectionStates()
   }
-  
+
   override func intrinsicContentSize() -> CGSize {
     let buttonSize = Int(frame.size.height)
     let width = (buttonSize * starCount) + (spacing * (starCount - 1))
@@ -74,7 +74,7 @@ class RatingControl: UIView {
   }
 
   // MARK: Button Action
-  
+
   func ratingButtonTapped(button: UIButton) {
     rating = ratingButtons.indexOf(button)! + 1
     print("Button pressed 👍, rating: \(rating)")

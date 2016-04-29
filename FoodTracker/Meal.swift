@@ -31,7 +31,7 @@ class Meal: NSObject, /* protocol */ NSCoding {
   }
 
   // MARK: Initialization
-  
+
   init?(name: String, photo: UIImage?, rating: Int) {
     // Initialize stored properties.
     self.name = name
