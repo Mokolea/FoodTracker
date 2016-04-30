@@ -9,8 +9,6 @@ iOS Developer Library: [Start Developing iOS Apps (Swift)](https://developer.app
  - Apple Developer: [Swift Resources](https://developer.apple.com/swift/resources/)
  - iOS Developer Library: [The Swift Programming Language (Swift 2.2)](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/)
 
-**TODO...**
-
 *GNU General Public License v3.0*
 
 -- Mario
