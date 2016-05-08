@@ -5,6 +5,8 @@ iOS Developer Library: [Start Developing iOS Apps (Swift)](https://developer.app
 [![Release](https://img.shields.io/github/release/Mokolea/FoodTracker.svg)](https://github.com/Mokolea/FoodTracker/releases)
 ![License](https://img.shields.io/github/license/Mokolea/FoodTracker.svg)
 
+Xcode 7.3.1 (Swift 2.2)
+
 ## Links
  - Apple Developer: [Swift Resources](https://developer.apple.com/swift/resources/)
  - iOS Developer Library: [The Swift Programming Language (Swift 2.2)](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/)
