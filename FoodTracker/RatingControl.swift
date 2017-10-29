@@ -41,13 +41,13 @@ class RatingControl: UIView {
       let button = UIButton()
 
       //button.backgroundColor = UIColor.redColor()
-      button.setImage(emptyStarImage, forState: .Normal)
-      button.setImage(filledStarImage, forState: .Selected)
-      button.setImage(filledStarImage, forState: [.Highlighted, .Selected])
+      button.setImage(emptyStarImage, for: UIControlState())
+      button.setImage(filledStarImage, for: .selected)
+      button.setImage(filledStarImage, for: [.highlighted, .selected])
 
       button.adjustsImageWhenHighlighted = false
 
-      button.addTarget(self, action: #selector(RatingControl.ratingButtonTapped(_:)), forControlEvents: .TouchDown)
+      button.addTarget(self, action: #selector(RatingControl.ratingButtonTapped(_:)), for: .touchDown)
       ratingButtons += [button]
       addSubview(button)
     }
@@ -59,14 +59,14 @@ class RatingControl: UIView {
     var buttonFrame = CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize)
 
     // Offset each button's origin by the length of the button plus spacing.
-    for (index, button) in ratingButtons.enumerate() {
+    for (index, button) in ratingButtons.enumerated() {
       buttonFrame.origin.x = CGFloat(index * (buttonSize + spacing))
       button.frame = buttonFrame
     }
     updateButtonSelectionStates()
   }
 
-  override func intrinsicContentSize() -> CGSize {
+  override var intrinsicContentSize : CGSize {
     let buttonSize = Int(frame.size.height)
     let width = (buttonSize * starCount) + (spacing * (starCount - 1))
 
@@ -75,17 +75,17 @@ class RatingControl: UIView {
 
   // MARK: Button Action
 
-  func ratingButtonTapped(button: UIButton) {
-    rating = ratingButtons.indexOf(button)! + 1
+  func ratingButtonTapped(_ button: UIButton) {
+    rating = ratingButtons.index(of: button)! + 1
     print("Button pressed 👍, rating: \(rating)")
 
     updateButtonSelectionStates()
   }
 
   func updateButtonSelectionStates() {
-    for (index, button) in ratingButtons.enumerate() {
+    for (index, button) in ratingButtons.enumerated() {
       // If the index of a button is less than the rating, that button should be selected.
-      button.selected = index < rating
+      button.isSelected = index < rating
     }
   }
 
